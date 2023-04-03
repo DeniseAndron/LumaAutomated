@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="TestNGListeners"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="C:/Users/Denisa/Desktop/automation/denisa learns/LumaAutomated">
+        <classes>
+            <class name="CreateAccountTestCase"></class>
+            <class name="HomePageTestCase"></class>
+        </classes>
+
+    </test>
+
+</suite>
