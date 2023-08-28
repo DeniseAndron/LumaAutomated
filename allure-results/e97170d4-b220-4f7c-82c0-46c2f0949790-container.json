@@ -1,0 +1,1 @@
+{"uuid":"e97170d4-b220-4f7c-82c0-46c2f0949790","name":"LumaAutomated","children":["22adc479-8d21-4179-bc44-6317d10a010d"],"befores":[],"afters":[{"name":"tearDownTest","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1693230587699,"stop":1693230588491}],"start":1693230535702,"stop":1693230588491}
