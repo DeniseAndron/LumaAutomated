@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="LumaAutomated" />
+        <module name="qaa" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="LumaAutomated" target="18" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,0 +1,32 @@
+{
+  "timeout":"30",
+  "file_download_timeout":"899",
+  "database_check":"false",
+  "url": "https://magento.softwaretestingboard.com/",
+  "testrail_api_end_point": "",
+  "testrail_username": "",
+  "testrail_password": "",
+  "testrail_custom_reviewedby": "",
+  "testrail_api_run_id": "",
+  "testrail_section_id": "",
+  "testrail_import_api_testcases": "false",
+  "testrail_post_api_result": "true",
+  "test1": {
+    "url": "https://magento.softwaretestingboard.com/",
+    "host": "",
+    "port": "",
+    "username": "",
+    "password": "",
+    "schema": "",
+    "timeout":"",
+    "database_check":"",
+    "currentVersion": "",
+    "v1": {
+      "auth_end_point": "",
+      "api_end_point": "",
+      "api_version": "v1",
+      "SPEED_LIMIT_TOTAL_REQUESTS_TIME_WINDOW":"1",
+      "token": ""
+    }
+  }
+}

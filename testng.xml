@@ -7,8 +7,8 @@
     </listeners>
     <test verbose="2" preserve-order="true" name="C:/Users/Denisa/Desktop/automation/denisa learns/LumaAutomated">
         <classes>
-            <class name="CreateAccountTestCase"></class>
-            <class name="HomePageTestCase"></class>
+            <class name="com.luma.CreateAccountTestCase"></class>
+            <class name="com.luma.HomePageTestCase"></class>
         </classes>
 
     </test>
