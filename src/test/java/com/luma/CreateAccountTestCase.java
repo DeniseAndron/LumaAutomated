@@ -1,63 +1,61 @@
+package com.luma;
+
+import com.luma.framework.Utilities;
+import com.luma.pages.BaseTest;
+import jdk.jfr.Description;
 import org.openqa.selenium.WebDriver;
+import com.luma.pages.LumaCreateAccountPage;
 
 import org.testng.annotations.*;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.assertEquals;
+import static junit.framework.Assert.assertEquals;
 
 
 //Listeners are components in TestNG that keep track of test execution and helps to perform actions at multiple stages of test execution
 
-public class CreateAccountTestCase extends BasePage {
-
-    // We call the constructor from BasePage
-    public CreateAccountTestCase(){
-        super();
-    }
-    private static WebDriver driver = null;
-
-    @BeforeTest
-    public void setUpTest() {
-        // we call the properties file from the basepage containing the url
-
-        driver = initalizeBrowserAndOpenApp(prop.getProperty("browser"));
+public class CreateAccountTestCase extends BaseTest {
 
 
 
-    }
     @Parameters({})
     @Test (priority = 2)
+    @Description("Create account")
     public  void CreateAccountTest() {
-        LumaCreateAccountPage createAccountObj =  new LumaCreateAccountPage(driver);
+        LumaCreateAccountPage createAccountObj =  new LumaCreateAccountPage(getDriver());
+        String firstName = "Denisa";
+        String lastName = "Andron";
+        String email = "denisa";
+        String password = "Testing123!";
+
 
         // Navigate to Create Account Page
         createAccountObj.goToCreatingPage();
         //Fill in the first name
-        createAccountObj.setFirstName("Denisa");
+        createAccountObj.setFirstName(firstName);
         //Fill in last name
-        createAccountObj.setLastName("Andron");
+        createAccountObj.setLastName(lastName);
         //Check the NewsLetter button
         createAccountObj.checkNewsletter();
         //Set a random email address
-        createAccountObj.setEmail("denisa6" + Utilities.generateTimeStamp() +"@gmail.com");
+        createAccountObj.setEmail(email + Utilities.generateTimeStamp() +"@gmail.com");
         //Set password
-        createAccountObj.setPassword("Testing123!");
+        createAccountObj.setPassword(password);
         //Confirm password
-        createAccountObj.setPasswordConfirm("Testing123!");
+        createAccountObj.setPasswordConfirm(password);
         //Click Button to create account
         createAccountObj.clickCreateButton();
         //Get the title of the page
-        String title = driver.getTitle();
+        String title = getDriver().getTitle();
         assertEquals (title, "My Account");
 
     }
     @AfterTest
     public void tearDownTest() {
         //close browser
-        driver.close();
-
+        getDriver().close();
         System.out.println("Test completed Successfully");
     }
 }
