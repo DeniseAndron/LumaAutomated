@@ -20,23 +20,23 @@ public class LumaCreateAccountPage {
         WebElement navigateToCreateButton;
 
         @FindBy(id="firstname")
-        WebElement first_name_box;
+        WebElement firstNameBox;
 
         @FindBy(id="lastname")
-        WebElement last_name_box;
+        WebElement lastNameBox;
 
         @FindBy(id="is_subscribed")
-        WebElement newsletter_check;
+        WebElement newsLetterCheck;
 
         //Sign-in information
         @FindBy(id="email_address")
-         WebElement email_box;
+         WebElement emailBox;
         @FindBy(id="password")
-        WebElement password_box;
+        WebElement passwordField;
         @FindBy(id="password-confirmation")
-        WebElement confirm_password;
+        WebElement confirmPassword;
         @FindBy(xpath = "//button[@title='Create an Account']//span[contains(text(),'Create an Account')]")
-        WebElement create_button;
+        WebElement createButton;
 
 
 
@@ -52,18 +52,16 @@ public class LumaCreateAccountPage {
         //Filling in all the information on the page
 
         public void goToCreatingPage() {
-                try {
+
                         navigateToCreateButton.click();
-                } catch (Exception e) {
-                        System.out.println("Exception caught" + e.getMessage());
-                }
+
         }
 
         public void setFirstName(String text) {
 
                 try {
 
-                        first_name_box.sendKeys(text);
+                        firstNameBox.sendKeys(text);
                 } catch (Exception e) {
                         System.out.println("Exception caught" + e.getMessage());
 
@@ -72,7 +70,7 @@ public class LumaCreateAccountPage {
         public void setLastName(String text) {
                 try {
 
-                        last_name_box.sendKeys(text);
+                        lastName.sendKeys(text);
                 } catch (Exception e) {
                         System.out.println("Exception caught" + e.getMessage());
 
@@ -81,7 +79,7 @@ public class LumaCreateAccountPage {
 
         public void checkNewsletter() {
                 try {
-                        newsletter_check.click();
+                        newsLetterCheck.click();
                 } catch (Exception e) {
                         System.out.println("Exception caught" + e.getMessage());
 
@@ -90,7 +88,7 @@ public class LumaCreateAccountPage {
         public void setEmail(String text) {
                 try {
 
-                        email_box.sendKeys(text);
+                        emailBox.sendKeys(text);
                 } catch (Exception e) {
                         System.out.println("Exception caught" + e.getMessage());
 
@@ -109,7 +107,7 @@ public class LumaCreateAccountPage {
 
         public void setPasswordConfirm(String text) {
                 try {
-                confirm_password.sendKeys(text);
+                confirmPassword.sendKeys(text);
                 } catch (Exception e) {
                         System.out.println("Exception caught" + e.getMessage());
 
